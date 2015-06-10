@@ -1,5 +1,5 @@
 # puzzle-piece
-Puzzle piece generator
+A PHP puzzle piece image generator
 
 # examples
 
