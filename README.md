@@ -1,8 +1,34 @@
 # puzzle-piece
 Puzzle piece generator
 
-For examples please see "Example" directory.
+# examples
 
+To generate image files of puzzle pieces:
+```PHP
+$pieceSize = 50;
+$pieceMargin = 10;
+
+$piece = new Piece('../img.jpg', $pieceSize, $pieceMargin);
+
+for ($i = 0; $i <= $piece->getMaxElementsX(); $i++) {
+    for ($j = 0; $j <= $piece->getMaxElementsY(); $j++) {
+        // the output will be save in "output" directory with the name "i-j.gif"
+        $piece->output($i, $j, 'output/' . $i . '-' . $j . '.gif');
+    }
+}
+```
+
+To display the puzzle piece image directly:
+
+```PHP
+$pieceSize = 50;
+$pieceMargin = 10;
+
+$piece = new Piece('../img.jpg', $pieceSize, $pieceMargin);
+
+// the output will also generate GIF headers
+$piece->output($x, $y);
+```
 ----
 
 DISCLAIMER
